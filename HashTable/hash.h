@@ -7,7 +7,7 @@ using namespace std;
 class bhash final
 {
 private:
-	static const int tableSize=20;
+	static const int tableSize=60000;
 	int count = 0;
 
 	struct item
@@ -26,4 +26,6 @@ public:
 	int Count();
 	int NumberOfItemsInIndex(int index);
 	void Print(bool showNull);
+	void PrintItemsInIndex(int index);
+	void FindShow(string showName);
 };
