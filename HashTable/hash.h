@@ -27,4 +27,5 @@ public:
 	int NumberOfItemsInIndex(int index);
 	void Print(bool showNull);
 	void PrintItemsInIndex(int index);
+	void FindShow(string showName);
 };

@@ -120,6 +120,22 @@ void bhash::PrintItemsInIndex(int index)
 	}
 }
 
+void bhash::FindShow(string showName)
+{
+	int index = Hash(showName);
+	if(index>=0)
+	{
+		item* Ptr = HashTable[index];
+		while (Ptr != NULL) {
+			if(showName==Ptr->showName)
+			{
+				cout << "SHOW: " << Ptr->showName << " NETWORK " << Ptr->network << endl;
+			}
+			Ptr = Ptr->next;
+		}
+	}
+}
+
 
 int ::bhash::Hash(string key)
 {

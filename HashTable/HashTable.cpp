@@ -24,5 +24,6 @@ int main()
 	h.Add("Star Trek:Voyager", "NETFLIX");
 	h.Add("Star Trek:Enterprise", "NETFLIX");
 	//h.Print(false);
-	h.PrintItemsInIndex(848);
+	//h.PrintItemsInIndex(848);
+	h.FindShow("Star Trek");
 }
