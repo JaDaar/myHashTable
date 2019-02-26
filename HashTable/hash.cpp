@@ -102,6 +102,24 @@ void bhash::Print(bool showNull)
 	}
 }
 
+void bhash::PrintItemsInIndex(int index)
+{
+	item* Ptr = HashTable[index];
+	if(Ptr->showName.empty())
+	{
+		cout << "The Index: " << index << " is empty." << endl;
+	}else
+	{
+		cout << "The index " << index << " contains: " << endl;
+		while(Ptr!=NULL)
+		{
+			cout << " SHOW NAME: " << Ptr->showName << endl;
+			cout << " NETWORK: " << Ptr->network << endl;
+			Ptr = Ptr->next;
+		}
+	}
+}
+
 
 int ::bhash::Hash(string key)
 {
@@ -120,6 +138,6 @@ int ::bhash::Hash(string key)
 	}
 	//	modulus operator assigns index with the remainder of hash / tableSize
 	const auto index = hash % tableSize;
-
+	//cout << "hash index: " << index << " key " << key << endl;
 	return index;
 }
